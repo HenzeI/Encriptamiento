@@ -36,7 +36,7 @@ const saltRounds = 10; // Evita que dos contraseñas iguales generen el mismo ha
 bcrypt.hash(password, saltRounds, function(err, hash) {
     console.log('Contraseña cifrada:', hash);
 
-    // Metodo compara de la libreria bcrypt  
+    // Metodo de comparacion de la libreria bcrypt  
     bcrypt.compare('miPassword', hash, function(err, result) {
         console.log('¿Coincide?', result);
     });
